@@ -1,0 +1,38 @@
+<!-- 런서버하자마자 보이는 페이지/ main 상속, css 작성, 폰트색, 배경색 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Main</title>
+    {% endblock %}
+    {% block extrahead %}
+    <style>
+        body{
+            background-color: rgb(247, 255, 243);
+            color: rgb(76, 18, 20);
+        }
+    </style>
+    {% endblock %}
+    
+</head>
+
+<body>
+    <nav>
+        <br>
+        <a href="{% url 'main' %}">main</a>
+        <a href="{% url 'introduce' %}">introduce</a>
+        <a href="{% url 'study' %}">study</a>
+        <br>
+    </nav>
+
+{% block content %}
+    <h1>11주차 과제입니다</h1>
+{% endblock %}
+</body>  
+
+</html>
+
